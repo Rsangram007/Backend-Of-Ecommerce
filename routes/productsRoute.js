@@ -20,7 +20,7 @@ productsRouter.post(
   createProductCtrl
 );
 
-productsRouter.get("/", getProductsCtrl);
+productsRouter.get("/Product", getProductsCtrl);
 productsRouter.get("/:id", getProductCtrl);
 productsRouter.put("/:id", isLoggedIn, isAdmin, updateProductCtrl);
 productsRouter.delete("/:id/delete", isLoggedIn, isAdmin, deleteProductCtrl);
