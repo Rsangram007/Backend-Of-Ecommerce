@@ -84,9 +84,7 @@ app.use(express.urlencoded({ extended: true }));
  
 //routes
 //Home route
-app.get("/", (req, res) => {
-  res.send("Welcome to the home page");
-});
+
 app.use("/api/v1/users/", userRoutes);
 app.use("/api/v1/products/", productsRouter);
 app.use("/api/v1/categories/", categoriesRouter);
