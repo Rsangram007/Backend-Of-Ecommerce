@@ -80,12 +80,12 @@ app.use(express.json());
 //url encoded
 app.use(express.urlencoded({ extended: true }));
 
-//server static files
-app.use(express.static("public"));
+ 
+ 
 //routes
 //Home route
 app.get("/", (req, res) => {
-  res.sendFile(path.join("public", "index.html"));
+  res.send("Welcome to the home page");
 });
 app.use("/api/v1/users/", userRoutes);
 app.use("/api/v1/products/", productsRouter);
